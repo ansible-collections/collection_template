@@ -1,48 +1,48 @@
 # collection_template
-A GitHub Template repo to use as the basis for future repos. See [Creating a repository from a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to start your own collection. This README.md contains the sections we recommend you include in your collection README.md, and includes embedded comments to help you determine what each section should contain. Delete this top-level section in your collection repo.
+You can build a new repository for an Ansible Collection using this template by following [Creating a repository from a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template). This README.md contains recommended headings for your collection README.md, with comments describing what each section should contain. Once you have created your collection repository, delete this paragraph and the title above it from your README.md.
 
-# Collection Title
-<!-- Add CI and code coverage badges. Sample included below. -->
+# Foo Collection
+<!-- Add CI and code coverage badges here. Samples included below. -->
 [![CI](https://github.com/ansible-collections/kubernetes/workflows/CI/badge.svg?event=push)](https://github.com/ansible-collections/kubernetes/actions) [![Codecov](https://img.shields.io/codecov/c/github/ansible-collections/kubernetes)](https://codecov.io/gh/ansible-collections/kubernetes)
 
 <!-- Describe the collection and why a user would want to use it. What does the collection do? -->
 
 ## Tested with Ansible
 
-<!-- List which versions of Ansible this has been tested with. Must match what is in galaxy.yml. -->
+<!-- List the versions of Ansible the collection has been tested with. Must match what is in galaxy.yml. -->
 
-## Requirements
+## External requirements
 
-<!--List any external requirements that the collection depends on. This should not be the collections that would be auto-installed, but other requirements, such as a minimum version of an OS etc. -->
+<!-- List any external resources the collection depends on, for example minimum versions of an OS, libraires, or utilities. Do not list other Ansible collections here. -->
 
 ### Supported connections
-<!-- An optional section for network/cloud etc collections that support only specific connection types (such as HTTPAPI, netconf, etc). -->
+<!-- Optional. If your collection supports only specific connection types (such as HTTPAPI, netconf, or others), list them here. -->
 
 ## Included content
 
 <!-- Galaxy will eventually list the module docs within the UI, but until that is ready, you may need to either describe your plugins etc here, or point to an external docsite to cover that information. -->
 
-## Using the collection
+## Using this collection
 
 <!--Include some quick examples that cover the most common use cases for your collection content. -->
 
 See [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html) for more details.
 
-## Contributing to the collection
+## Contributing to this collection
 
-<!--Describe how the community can contribute to your collection.  At a minimum, include how and where to create issues so users can report problems or enhancement requests for the collection.  You should also list any requirements/recommended workflow, and testing you want for a smooth merge experience of community PRs. If you are following general Ansible contributor guidelines, you can link to - [Ansible Community Guide](https://docs.ansible.com/ansible/latest/community/index.html). -->
+<!--Describe how the community can contribute to your collection. At a minimum, include how and where users can create issues to report problems or request features for this collection.  List contribution requirements, including preferred workflows and necessary testing, so you can benefit from community PRs. If you are following general Ansible contributor guidelines, you can link to - [Ansible Community Guide](https://docs.ansible.com/ansible/latest/community/index.html). -->
 
 
-## Release Notes
+## Release notes
 <!--Add a link to a changelog.md file or an external docsite to cover this information. -->
 
 ## Roadmap
 
-<!-- An optional section to include the roadmap for this collection, and the proposed release/versioning strategy so users can anticipate the upgrade/update cycle. -->
+<!-- Optional. Include the roadmap for this collection, and the proposed release/versioning strategy so users can anticipate the upgrade/update cycle. -->
 
 ## More information
 
-<!-- List out where the user can find additional information, such as working group meeting times, slack/IRC channels, a documentation site for a product this collection works with, etc. The following links should be included: -->
+<!-- List out where the user can find additional information, such as working group meeting times, slack/IRC channels, or documentation for the product this collection automates. At a minimum, link to: -->
 
 - [Ansible Collection overview](https://github.com/ansible-collections/overview)
 - [Ansible User guide](https://docs.ansible.com/ansible/latest/user_guide/index.html)
@@ -55,4 +55,4 @@ See [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_gui
 
 GNU General Public License v3.0 or later.
 
-See LICENCE to see the full text.
+See [LICENCE](https://www.gnu.org/licenses/gpl-3.0.txt) to see the full text.
