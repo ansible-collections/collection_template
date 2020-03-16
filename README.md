@@ -1,5 +1,5 @@
-# collection -->template
-A GitHub Template repo to use as the basis for future repos. Clone this repo to start your own collection. This README.md contains the sections we recommend you include in your collection README.md, and includes embedded comments to help you determine what each section should contain. Delete this top-level section in your collection repo.
+# collection_template
+A GitHub Template repo to use as the basis for future repos. See [Creating a repository from a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to start your own collection. This README.md contains the sections we recommend you include in your collection README.md, and includes embedded comments to help you determine what each section should contain. Delete this top-level section in your collection repo.
 
 # Collection Title
 <!-- Add CI and code coverage badges. Sample included below. -->
