@@ -13,7 +13,7 @@ You can build a new repository for an Ansible Collection using this template by 
 
 ## External requirements
 
-<!-- List any external resources the collection depends on, for example minimum versions of an OS, libraires, or utilities. Do not list other Ansible collections here. -->
+<!-- List any external resources the collection depends on, for example minimum versions of an OS, libraries, or utilities. Do not list other Ansible collections here. -->
 
 ### Supported connections
 <!-- Optional. If your collection supports only specific connection types (such as HTTPAPI, netconf, or others), list them here. -->
