@@ -55,4 +55,4 @@ See [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_gui
 
 GNU General Public License v3.0 or later.
 
-See [LICENCE](https://www.gnu.org/licenses/gpl-3.0.txt) to see the full text.
+See [LICENSE](https://www.gnu.org/licenses/gpl-3.0.txt) to see the full text.
