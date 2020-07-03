@@ -1,93 +1,176 @@
+# README FIRST
+# 1. replace "NAMESPACE/COLLECTION_NAME" with the correct name, ie "community/zabbix"
+# 2. If you don't have unit tests remove that section
+# 3. If your collection depends on other collections ensure they are installed, see "Install collection dependencies"
+# If you need help please ask in #ansible-devel on Freenode IRC
+
 name: CI
 on:
-- pull_request
+# Run CI against all pushes (direct commits) and Pull Requests
+- push:
+- pull_request:
 
 jobs:
+
+###
+# Sanity tests (REQUIRED)
+#
+# https://docs.ansible.com/ansible/latest/dev_guide/testing_sanity.html
+
   sanity:
-    name: Sanity (${{ matrix.ansible }})
+    name: Sanity (Ⓐ${{ matrix.ansible }}+py${{ matrix.python }})
     strategy:
       matrix:
         ansible:
-        - stable-2.10
-        - devel
+          # It's important that Sanity is tested against all stable-X.Y branches
+          # Testing against `devel` may fail as new tests are added.
+        # - stable-2.9 # Only if your collection supports Ansible 2.9
+          - stable-2.10
+          - devel
+        python:
+          - 2.7
+          - 3.7
+          - 3.8
+        exclude:
+          - python: 3.8  # blocked by ansible/ansible#70155
     runs-on: ubuntu-latest
     steps:
 
-      - name: Check out code
-        uses: actions/checkout@v1
-        with:
-          # FIXME ansible_collections/NAMESPACE/COLLECTION
-          path: ansible_collections/community/FIXME
+      # ansible-test requires the collection to be in a directory in the form
+      # .../ansible_collections/NAMESPACE/COLLECTION_NAME/
 
-      - name: Set up Python 3.6
-        uses: actions/setup-python@v1
+      - name: Check out code
+        uses: actions/checkout@v2
         with:
-          python-version: 3.6
+          path: ansible_collections/NAMESPACE/COLLECTION_NAME
+
+      - name: Set up Python ${{ matrix.ansible }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+
+      # Install the head of the given branch (devel, stable-2.10)
+      - name: Install ansible-base (${{ matrix.ansible }})
+        run: pip install https://github.com/ansible/ansible/archive/${{ matrix.ansible }}.tar.gz --disable-pip-version-check
+
+      # run ansible-test sanity inside of Docker.
+      # The docker container has all the pinned dependencies that are required.
+      # Explicity specify the version of Python we want to test
+      - name: Run sanity tests
+        run: ansible-test sanity --docker -v --color --python ${{ matrix.python }}
+        working-directory: ./ansible_collections/NAMESPACE/COLLECTION_NAME
+
+###
+# Unit tests (OPTIONAL)
+#
+# https://docs.ansible.com/ansible/latest/dev_guide/testing_units.html
+
+  units:
+    runs-on: ubuntu-latest
+    name: I (Ⓐ${{ matrix.ansible }}+py${{ matrix.python }}})
+    strategy:
+      fail-fast: false
+      matrix:
+        ansible:
+          # - stable-2.9 # Only if your collection supports Ansible 2.9
+          - stable-2.10
+          - devel
+        python:
+          - 2.7
+          - 3.7
+        exclude:
+          - python: 3.8  # blocked by ansible/ansible#70155
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          path: ansible_collections/NAMESPACE/COLLECTION_NAME
+
+      - name: Set up Python ${{ matrix.ansible }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
 
       - name: Install ansible-base (${{ matrix.ansible }})
         run: pip install https://github.com/ansible/ansible/archive/${{ matrix.ansible }}.tar.gz --disable-pip-version-check
 
-      - name: Run sanity tests
-        run: ansible-test sanity --docker -v --color --python 3.6
+      # OPTIONAL If your unit test requires Python libraries from other collections
+      # Install them like this
+      - name: Install collection dependencies
+        run: ansible-galaxy collection install ansible.netcommon -p .
 
-# If you don't have unit tests, you can delete this section
-  units:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v1
-        with:
-          # FIXME ansible_collections/NAMESPACE/COLLECTION        
-          path: ansible_collections/community/grafana
+      # Run the unit tests
+      - name: Run unit test
+        run: ansible-test unit -v --color --retry-on-error --continue-on-error --diff --python ${{ matrix.python }} --docker --coverage
+        working-directory: ./ansible_collections/NAMESPACE/COLLECTION_NAME
 
-      - name: Set up Python 3.6
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.6
-
-      - name: Install ansible-base (devel)
-        run: pip install https://github.com/ansible/ansible/archive/devel.tar.gz --disable-pip-version-check
-
-      - name: Run unit tests
-        run: ansible-test units --docker -v --color --python 3.6 --coverage
-
-      - name: Generate coverage report.
+        # ansible-test support producing code coverage date
+      - name: Generate coverage report
         run: ansible-test coverage xml -v --requirements --group-by command --group-by version
+        working-directory: ./ansible_collections/NAMESPACE/COLLECTION_NAME
 
+      # See the reports at https://codecov.io/gh/ansible_collections/GITHUBORG/REPONAME
       - uses: codecov/codecov-action@v1
         with:
           fail_ci_if_error: false
 
-# If you don't have unit tests, you can delete this section
-# Though you should consider creating some
+###
+# Integration tests (RECOMMENDED)
+#
+# https://docs.ansible.com/ansible/latest/dev_guide/testing_integration.html
+
+
+# If the application you are testing is available as a docker container and you want to test
+# multiple versions see the following for an example:
+# https://github.com/ansible-collections/community.zabbix/tree/master/.github/workflows
 
   integration:
     runs-on: ubuntu-latest
+    name: I (Ⓐ${{ matrix.ansible }}+py${{ matrix.python }}})
     strategy:
+      fail-fast: false
       matrix:
-        python_version: ["3.6"]
-    container:
-      image: python:${{ matrix.python_version }}-alpine
+        ansible:
+          # - stable-2.9 # Only if your collection supports Ansible 2.9
+          - stable-2.10
+          - devel
+        python:
+          - 2.7
+          - 3.7
+        exclude:
+          - python: 3.8  # blocked by ansible/ansible#70155
+
     steps:
-
       - name: Check out code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         with:
-          # FIXME ansible_collections/NAMESPACE/COLLECTION        
-          path: ansible_collections/community/FIXME
-          
-      - name: Install ansible-base (stable-2.10)
-        run: pip install https://github.com/ansible/ansible/archive/stable-2.10.tar.gz --disable-pip-version-check
+          path: ansible_collections/NAMESPACE/COLLECTION_NAME
 
+      - name: Set up Python ${{ matrix.ansible }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
 
-      - name: Run integration tests on Python ${{ matrix.python_version }}
-        run: ansible-test integration --docker -v --color --retry-on-error --python ${{ matrix.python_version }} --continue-on-error --diff --coverage
-        
-      - name: Generate coverage report.
+      - name: Install ansible-base (${{ matrix.ansible }})
+        run: pip install https://github.com/ansible/ansible/archive/${{ matrix.ansible }}.tar.gz --disable-pip-version-check
+
+      # OPTIONAL If your integration test requires Python libraries or modules from other collections
+      # Install them like this
+      - name: Install collection dependencies
+        run: ansible-galaxy collection install ansible.netcommon -p .
+
+      # Run the integration tests
+      - name: Run integration test
+        run: ansible-test integration -v --color --retry-on-error --continue-on-error --diff --python ${{ matrix.python }} --docker --coverage
+        working-directory: ./ansible_collections/NAMESPACE/COLLECTION_NAME
+
+        # ansible-test support producing code coverage date
+      - name: Generate coverage report
         run: ansible-test coverage xml -v --requirements --group-by command --group-by version
-        # FIXME ansible_collections/NAMESPACE/COLLECTION        
-        working-directory: ./ansible_collections/community/FIXME
+        working-directory: ./ansible_collections/NAMESPACE/COLLECTION_NAME
 
+      # See the reports at https://codecov.io/gh/ansible_collections/GITHUBORG/REPONAME
       - uses: codecov/codecov-action@v1
         with:
           fail_ci_if_error: false
