@@ -7,8 +7,8 @@
 name: CI
 on:
 # Run CI against all pushes (direct commits) and Pull Requests
-- push:
-- pull_request:
+- push
+- pull_request
 
 jobs:
 
