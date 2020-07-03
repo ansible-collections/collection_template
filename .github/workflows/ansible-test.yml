@@ -67,7 +67,7 @@ jobs:
 
   units:
     runs-on: ubuntu-latest
-    name: I (Ⓐ${{ matrix.ansible }}+py${{ matrix.python }}})
+    name: Units (Ⓐ${{ matrix.ansible }}+py${{ matrix.python }}})
     strategy:
       fail-fast: false
       matrix:
@@ -102,7 +102,7 @@ jobs:
 
       # Run the unit tests
       - name: Run unit test
-        run: ansible-test unit -v --color --retry-on-error --continue-on-error --diff --python ${{ matrix.python }} --docker --coverage
+        run: ansible-test units -v --color --retry-on-error --continue-on-error --diff --python ${{ matrix.python }} --docker --coverage
         working-directory: ./ansible_collections/NAMESPACE/COLLECTION_NAME
 
         # ansible-test support producing code coverage date
