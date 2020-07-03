@@ -1,0 +1,20 @@
+namespace: community
+name: FIXME
+version: 0.1.0
+readme: README.md
+authors:
+  - YOUR NAME (github.com/YOURGITHUB)
+description: null
+license_file: COPYING
+tags:
+  - acme
+  - certificate
+  - community
+repository: https://github.com/ansible-collections/community.REPO_NAME
+#documentation: https://github.com/ansible-collection-migration/community.REPO_NAME/tree/main/docs
+homepage: https://github.com/ansible-collections/community.REPO_NAME
+issues: https://github.com/ansible-collections/community.REPO_NAME/issues
+build_ignore:
+  - 'community-*-*.tar.gz'
+  - .gitignore
+  - changelogs/.plugin-cache.yaml
