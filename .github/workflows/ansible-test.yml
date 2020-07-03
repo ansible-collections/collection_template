@@ -102,7 +102,7 @@ jobs:
 
       # Run the unit tests
       - name: Run unit test
-        run: ansible-test units -v --color --retry-on-error --continue-on-error --diff --python ${{ matrix.python }} --docker --coverage
+        run: ansible-test units -v --color --python ${{ matrix.python }} --docker --coverage
         working-directory: ./ansible_collections/NAMESPACE/COLLECTION_NAME
 
         # ansible-test support producing code coverage date
