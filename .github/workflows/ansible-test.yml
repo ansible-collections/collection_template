@@ -67,7 +67,7 @@ jobs:
 
   units:
     runs-on: ubuntu-latest
-    name: Units (Ⓐ${{ matrix.ansible }}+py${{ matrix.python }}})
+    name: Units (Ⓐ${{ matrix.ansible }}+py${{ matrix.python }})
     strategy:
       fail-fast: false
       matrix:
@@ -78,6 +78,7 @@ jobs:
         python:
           - 2.7
           - 3.7
+          - 3.8
         exclude:
           - python: 3.8  # blocked by ansible/ansible#70155
 
@@ -138,6 +139,7 @@ jobs:
         python:
           - 2.7
           - 3.7
+          - 3.8
         exclude:
           - python: 3.8  # blocked by ansible/ansible#70155
 
