@@ -34,7 +34,8 @@ See [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_gui
 
 
 ## Release notes
-<!--Add a link to a changelog.md file or an external docsite to cover this information. -->
+
+See the [changelog](https://github.com/ansible-collections/REPONAMEHERE/tree/main/CHANGELOG.rst).
 
 ## Roadmap
 
