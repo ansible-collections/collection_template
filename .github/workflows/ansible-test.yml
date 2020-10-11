@@ -6,9 +6,12 @@
 
 name: CI
 on:
-# Run CI against all pushes (direct commits) and Pull Requests
-- push
-- pull_request
+  # Run CI against all pushes (direct commits, also merged PRs), Pull Requests
+  push:
+  pull_request:
+  # Uncomment the following two lines to run CI once per day (at 06:00 UTC)
+  # schedule:
+  #   - cron: '0 6 * * *'
 
 jobs:
 
