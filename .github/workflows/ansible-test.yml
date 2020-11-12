@@ -109,9 +109,7 @@ jobs:
       # OPTIONAL If your unit test requires Python libraries from other collections
       # Install them like this
       - name: Install collection dependencies
-        run: |
-          ansible-galaxy collection install ansible.netcommon -p .
-          ansible-galaxy collection install ansible.utils -p .
+        run: ansible-galaxy collection install ansible.netcommon ansible.utils -p .
 
       # Run the unit tests
       - name: Run unit test
@@ -179,8 +177,7 @@ jobs:
       # OPTIONAL If your integration test requires Python libraries or modules from other collections
       # Install them like this
       - name: Install collection dependencies
-        run: |
-          ansible-galaxy collection install ansible.netcommon -p .
+        run: ansible-galaxy collection install ansible.netcommon -p .
 
       # Run the integration tests
       - name: Run integration test
