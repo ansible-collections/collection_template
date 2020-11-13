@@ -7,7 +7,7 @@ readme: README.md
 authors:
   - YOUR NAME (github.com/YOURGITHUB)
 description: null
-license_file: COPYING
+license_file: LICENSE
 tags:
 # tags so people can search for collections https://galaxy.ansible.com/search
 # tags are all lower-case, no spaces, no dashes.
