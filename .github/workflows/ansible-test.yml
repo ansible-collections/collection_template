@@ -144,6 +144,7 @@ jobs:
           - 3.8
           - 3.9
         exclude:
+          # Because ansible-test doesn't support python3.9 for Ansible 2.9
           - ansible: stable-2.9
             python: 3.9
 
