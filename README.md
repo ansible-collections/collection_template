@@ -1,11 +1,49 @@
 # collection_template
 You can build a new repository for an Ansible Collection using this template by following [Creating a repository from a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template). This README.md contains recommended headings for your collection README.md, with comments describing what each section should contain. Once you have created your collection repository, delete this paragraph and the title above it from your README.md.
 
-# Foo Collection
+# Foo Collection for Ansible
 <!-- Add CI and code coverage badges here. Samples included below. -->
 [![CI](https://github.com/ansible-collections/REPONAMEHERE/workflows/CI/badge.svg?event=push)](https://github.com/ansible-collections/REPONAMEHERE/actions) [![Codecov](https://img.shields.io/codecov/c/github/ansible-collections/REPONAMEHERE)](https://codecov.io/gh/ansible-collections/REPONAMEHERE)
 
 <!-- Describe the collection and why a user would want to use it. What does the collection do? -->
+
+## Code of Conduct
+
+We follow the [Ansible Code of Conduct](https://docs.ansible.com/ansible/latest/community/code_of_conduct.html) in all our interactions within this project.
+
+If you encounter abusive behavior, please refer to the [policy violations](https://docs.ansible.com/ansible/latest/community/code_of_conduct.html#policy-violations) section of the Code for information on how to raise a complaint.
+
+## Communication
+
+<!--List available communication channels. In addition to channels specific to your collection, we also recommend to use the following ones.-->
+
+We announce releases and important changes through the [Ansible Bullhorn newsletter](https://github.com/ansible/community/issues/546). Be sure you are subscribed.
+
+Join us in the ``ansible-community`` [IRC channel](https://docs.ansible.com/ansible/devel/community/communication.html#irc-meetings).
+
+We take part in the global quarterly [Ansible Contributor Summit](https://github.com/ansible/community/wiki/Contributor-Summit) virtually or in-person. Track the [Bullhorn newsletter](https://github.com/ansible/community/issues/546) and join us.
+
+For more information about communication, refer to the [Ansible Communication guide](https://docs.ansible.com/ansible/devel/community/communication.html).
+
+## Contributing to this collection
+
+<!--Describe how the community can contribute to your collection. At a minimum, fill up and include the CONTRIBUTING.md file containing how and where users can create issues to report problems or request features for this collection. List contribution requirements, including preferred workflows and necessary testing, so you can benefit from community PRs. If you are following general Ansible contributor guidelines, you can link to - [Ansible Community Guide](https://docs.ansible.com/ansible/devel/community/index.html). List the current maintainers (contributors with write or higher access to the repository). The following can be included:-->
+
+The content of this collection is made by people like you, a community of individuals collaborating on making the world better through developing automation software.
+
+Any kind of contribution is very welcome.
+
+You don't know how to start? Refer to our [contribution guide](CONTRIBUTING.md)!
+
+The current maintainers are listed in the [MAINTAINERS](MAINTAINERS) file. Don't hesitate to reach them out mentioning in the proposals. To learn how to maintain / become a maintainer of this collection, refer to the [Maintainer guidelines](https://github.com/ansible/community-docs/blob/main/maintaining.rst).
+
+## Governance
+
+<!--Describe how the collection is governed. Here can be the following text:--!>
+
+The process of decision making in this collection is based on discussing and finding consensus among participants.
+
+Every voice is important. If you have something on your mind, create an issue or dedicated discussion and let's discuss it!
 
 ## Tested with Ansible
 
@@ -24,14 +62,34 @@ You can build a new repository for an Ansible Collection using this template by 
 
 ## Using this collection
 
-<!--Include some quick examples that cover the most common use cases for your collection content. -->
+<!--Include some quick examples that cover the most common use cases for your collection content. It can include the following examples of installation and upgrade (change NAMESPACE.COLLECTION_NAME correspondingly):-->
 
-See [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html) for more details.
+### Installing the Collection from Ansible Galaxy
 
-## Contributing to this collection
+Before using this collection, you need to install it with the Ansible Galaxy command-line tool:
+```bash
+ansible-galaxy collection install NAMESPACE.COLLECTION_NAME
+```
 
-<!--Describe how the community can contribute to your collection. At a minimum, include how and where users can create issues to report problems or request features for this collection.  List contribution requirements, including preferred workflows and necessary testing, so you can benefit from community PRs. If you are following general Ansible contributor guidelines, you can link to - [Ansible Community Guide](https://docs.ansible.com/ansible/latest/community/index.html). -->
+You can also include it in a `requirements.yml` file and install it with `ansible-galaxy collection install -r requirements.yml`, using the format:
+```yaml
+---
+collections:
+  - name: NAMESPACE.COLLECTION_NAME
+```
 
+Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically with upgrade of the Ansible package. To upgrade the collection to the latest available version, run the following command:
+```bash
+ansible-galaxy collection install NAMESPACE.COLLECTION_NAME --upgrade
+```
+
+You can also install a specific version of the collection, for example, if you need to downgrade when something is broken in the latest version (please report an issue in this repository). Use the following syntax:
+
+```bash
+ansible-galaxy collection install NAMESPACE.COLLECTION_NAME:==0.1.0
+```
+
+See [Ansible Using collections](https://docs.ansible.com/ansible/devel/user_guide/collections_using.html) for more details.
 
 ## Release notes
 
@@ -46,10 +104,10 @@ See the [changelog](https://github.com/ansible-collections/REPONAMEHERE/tree/mai
 <!-- List out where the user can find additional information, such as working group meeting times, slack/IRC channels, or documentation for the product this collection automates. At a minimum, link to: -->
 
 - [Ansible Collection overview](https://github.com/ansible-collections/overview)
-- [Ansible User guide](https://docs.ansible.com/ansible/latest/user_guide/index.html)
-- [Ansible Developer guide](https://docs.ansible.com/ansible/latest/dev_guide/index.html)
+- [Ansible User guide](https://docs.ansible.com/ansible/devel/user_guide/index.html)
+- [Ansible Developer guide](https://docs.ansible.com/ansible/devel/dev_guide/index.html)
 - [Ansible Collections Checklist](https://github.com/ansible-collections/overview/blob/master/collection_requirements.rst)
-- [Ansible Community code of conduct](https://docs.ansible.com/ansible/latest/community/code_of_conduct.html)
+- [Ansible Community code of conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html)
 - [The Bullhorn (the Ansible Contributor newsletter)](https://us19.campaign-archive.com/home/?u=56d874e027110e35dea0e03c1&id=d6635f5420)
 - [Changes impacting Contributors](https://github.com/ansible-collections/overview/issues/45)
 
