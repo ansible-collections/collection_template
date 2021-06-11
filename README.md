@@ -39,7 +39,7 @@ The current maintainers are listed in the [MAINTAINERS](MAINTAINERS) file. Don't
 
 ## Governance
 
-<!--Describe how the collection is governed. Here can be the following text:--!>
+<!--Describe how the collection is governed. Here can be the following text:-->
 
 The process of decision making in this collection is based on discussing and finding consensus among participants.
 
