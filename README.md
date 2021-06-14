@@ -9,7 +9,7 @@ You can build a new repository for an Ansible Collection using this template by 
 
 ## Code of Conduct
 
-We follow the [Ansible Code of Conduct](https://docs.ansible.com/ansible/latest/community/code_of_conduct.html) in all our interactions within this project.
+We follow the [Ansible Code of Conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html) in all our interactions within this project.
 
 If you encounter abusive behavior, please refer to the [policy violations](https://docs.ansible.com/ansible/latest/community/code_of_conduct.html#policy-violations) section of the Code for information on how to raise a complaint.
 
