@@ -19,7 +19,7 @@ If you encounter abusive behavior, please refer to the [policy violations](https
 
 We announce releases and important changes through the [Ansible Bullhorn newsletter](https://github.com/ansible/community/wiki/News#the-bullhorn). Be sure you are [subscribed](http://eepurl.com/gZmiEP).
 
-Join us in the ``#ansible-community`` [IRC channel](https://docs.ansible.com/ansible/devel/community/communication.html#irc-channels).
+Join us in the `ansible` (general use questions and support), `#ansible-community` (community and collection development questions), and other [IRC channels](https://docs.ansible.com/ansible/devel/community/communication.html#irc-channels).
 
 We take part in the global quarterly [Ansible Contributor Summit](https://github.com/ansible/community/wiki/Contributor-Summit) virtually or in-person. Track the [Bullhorn newsletter](http://eepurl.com/gZmiEP) and join us.
 
