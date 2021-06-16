@@ -17,11 +17,11 @@ If you encounter abusive behavior, please refer to the [policy violations](https
 
 <!--List available communication channels. In addition to channels specific to your collection, we also recommend to use the following ones.-->
 
-We announce releases and important changes through the [Ansible Bullhorn newsletter](https://github.com/ansible/community/issues/546). Be sure you are subscribed.
+We announce releases and important changes through Ansible's [The Bullhorn newsletter](https://github.com/ansible/community/wiki/News#the-bullhorn). Be sure you are [subscribed](https://eepurl.com/gZmiEP).
 
-Join us in the ``#ansible-community`` [IRC channel](https://docs.ansible.com/ansible/devel/community/communication.html#irc-channels).
+Join us in the `#ansible` (general use questions and support), `#ansible-community` (community and collection development questions), and other [IRC channels](https://docs.ansible.com/ansible/devel/community/communication.html#irc-channels).
 
-We take part in the global quarterly [Ansible Contributor Summit](https://github.com/ansible/community/wiki/Contributor-Summit) virtually or in-person. Track the [Bullhorn newsletter](https://github.com/ansible/community/issues/546) and join us.
+We take part in the global quarterly [Ansible Contributor Summit](https://github.com/ansible/community/wiki/Contributor-Summit) virtually or in-person. Track [The Bullhorn newsletter](https://eepurl.com/gZmiEP) and join us.
 
 For more information about communication, refer to the [Ansible Communication guide](https://docs.ansible.com/ansible/devel/community/communication.html).
 
@@ -78,7 +78,7 @@ collections:
   - name: NAMESPACE.COLLECTION_NAME
 ```
 
-Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically with upgrade of the Ansible package. To upgrade the collection to the latest available version, run the following command:
+Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically when you upgrade the `ansible` package. To upgrade the collection to the latest available version, run the following command:
 ```bash
 ansible-galaxy collection install NAMESPACE.COLLECTION_NAME --upgrade
 ```
