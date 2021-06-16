@@ -78,7 +78,7 @@ collections:
   - name: NAMESPACE.COLLECTION_NAME
 ```
 
-Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically when you upgrade the Ansible package. To upgrade the collection to the latest available version, run the following command:
+Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically when you upgrade the `ansible` package. To upgrade the collection to the latest available version, run the following command:
 ```bash
 ansible-galaxy collection install NAMESPACE.COLLECTION_NAME --upgrade
 ```
