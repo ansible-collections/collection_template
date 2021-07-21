@@ -37,8 +37,6 @@ Any kind of contribution is very welcome.
 
 You don't know how to start? Refer to our [contribution guide](CONTRIBUTING.md)!
 
-The current maintainers are listed in the [MAINTAINERS](MAINTAINERS) file. Don't hesitate to reach them out mentioning in the proposals. To learn how to maintain / become a maintainer of this collection, refer to the [Maintainer guidelines](https://github.com/ansible/community-docs/blob/main/maintaining.rst).
-
 We use the following guidelines:
 
 * [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -49,7 +47,9 @@ We use the following guidelines:
 
 ### Collection maintenance
 
-Maintainers of this collection follow the [Maintainer guidelines](MAINTAINING.md).
+The current maintainers are listed in the [MAINTAINERS](MAINTAINERS) file. Don't hesitate to reach them out mentioning in the proposals.
+
+To learn how to maintain / become a maintainer of this collection, refer to the [Maintainer guidelines](MAINTAINING.md).
 
 ## Governance
 
