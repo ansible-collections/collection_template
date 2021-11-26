@@ -8,6 +8,9 @@ name: CI
 on:
   # Run CI against all pushes (direct commits, also merged PRs), Pull Requests
   push:
+    branches:
+      - main
+      - stable-*
   pull_request:
   # Run CI once per day (at 06:00 UTC)
   # This ensures that even if there haven't been commits that we are still testing against latest version of ansible-test for each ansible-base version
@@ -62,8 +65,18 @@ jobs:
       # The docker container has all the pinned dependencies that are required
       # and all python versions ansible supports.
       - name: Run sanity tests
-        run: ansible-test sanity --docker -v --color
+        run: ansible-test sanity --docker -v --color --coverage
         working-directory: ./ansible_collections/${{env.NAMESPACE}}/${{env.COLLECTION_NAME}}
+
+      # ansible-test support producing code coverage date
+      - name: Generate coverage report
+        run: ansible-test coverage xml -v --requirements --group-by command --group-by version
+        working-directory: ./ansible_collections/${{env.NAMESPACE}}/${{env.COLLECTION_NAME}}
+
+      # See the reports at https://codecov.io/gh/GITHUBORG/REPONAME
+      - uses: codecov/codecov-action@v1
+        with:
+          fail_ci_if_error: false
 
 ###
 # Unit tests (OPTIONAL)
@@ -110,7 +123,7 @@ jobs:
         run: ansible-test units -v --color --docker --coverage
         working-directory: ./ansible_collections/${{env.NAMESPACE}}/${{env.COLLECTION_NAME}}
 
-        # ansible-test support producing code coverage date
+      # ansible-test support producing code coverage date
       - name: Generate coverage report
         run: ansible-test coverage xml -v --requirements --group-by command --group-by version
         working-directory: ./ansible_collections/${{env.NAMESPACE}}/${{env.COLLECTION_NAME}}
@@ -181,7 +194,7 @@ jobs:
         run: ansible-test integration -v --color --retry-on-error --continue-on-error --diff --python ${{ matrix.python }} --docker --coverage
         working-directory: ./ansible_collections/${{env.NAMESPACE}}/${{env.COLLECTION_NAME}}
 
-        # ansible-test support producing code coverage date
+      # ansible-test support producing code coverage date
       - name: Generate coverage report
         run: ansible-test coverage xml -v --requirements --group-by command --group-by version
         working-directory: ./ansible_collections/${{env.NAMESPACE}}/${{env.COLLECTION_NAME}}
