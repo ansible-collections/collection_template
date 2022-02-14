@@ -165,8 +165,8 @@ jobs:
           - '3.9'
           - '3.10'
         exclude:
-          # Because ansible-test doesn't support python 3.9 for Ansible 2.9
-          # and Python 10 is supported in 2.12 or later.
+          # Because ansible-test doesn't support Python 3.9 for Ansible 2.9
+          # and Python 3.10 is supported in 2.12 or later.
           - ansible: stable-2.9
             python: '3.9'
           - ansible: stable-2.9
