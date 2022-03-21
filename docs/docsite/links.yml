@@ -6,6 +6,10 @@
 edit_on_github:
   repository: ansible-collections/community.REPO_NAME
   branch: main
+  # If your collection root (the directory containing galaxy.yml) does not coincide with your
+  # repository's root, you have to specify the path to the collection root here. For example,
+  # if the collection root is in a subdirectory ansible_collections/community/REPO_NAME
+  # in your repository, you have to set path_prefix to 'ansible_collections/community/REPO_NAME'.
   path_prefix: ''
 
 # Here you can add arbitrary extra links. Please keep the number of links down to a
