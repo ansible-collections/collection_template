@@ -9,12 +9,16 @@ edit_on_github:
   path_prefix: ''
 
 # Here you can add arbitrary extra links. Please keep the number of links down to a
-# minimum! Also note that some links are automatically added from information in
-# galaxy.yml. Automatically added are:
+# minimum! Also please keep the description short, since this will be the text put on
+# a button.
+#
+# Also note that some links are automatically added from information in galaxy.yml.
+# The following are automatically added:
 #   1. A link to the issue tracker (if `issues` is specified);
 #   2. A link to the homepage (if `homepage` is specified and does not equal the
 #      `documentation` or `repository` link);
 #   3. A link to the collection's repository (if `repository` is specified).
+
 extra_links:
   - description: Submit a bug report
     url: https://github.com/ansible-collections/community.REPO_NAME/issues/new?assignees=&labels=&template=bug_report.md
