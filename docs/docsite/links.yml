@@ -1,7 +1,7 @@
 ---
 # This will make sure that plugin and module documentation gets Edit on GitHub links
 # that allow users to directly create a PR for this plugin or module in GitHub's UI.
-# Remove if the collection repository is not on GitHub, or if you do not want this
+# Remove this section if the collection repository is not on GitHub, or if you do not want this
 # functionality for your collection.
 edit_on_github:
   repository: ansible-collections/community.REPO_NAME
@@ -24,10 +24,8 @@ edit_on_github:
 #   3. A link to the collection's repository (if `repository` is specified).
 
 extra_links:
-  - description: Submit a bug report
-    url: https://github.com/ansible-collections/community.REPO_NAME/issues/new?assignees=&labels=&template=bug_report.md
-  - description: Request a feature
-    url: https://github.com/ansible-collections/community.REPO_NAME/issues/new?assignees=&labels=&template=feature_request.md
+  - description: Report an issue
+    url: https://github.com/ansible-collections/community.REPO_NAME/issues/new/choose
 
 # Specify communication channels for your collection. We suggest to not specify more
 # than one place for communication per communication tool to avoid confusion.
@@ -43,5 +41,5 @@ communication:
     - topic: Ansible Project List
       url: https://groups.google.com/g/ansible-project
       # You can also add a `subscribe` field with an URI that allows to subscribe
-      # to the mailing list. For lists on https://groups.google.com/ a link is
+      # to the mailing list. For lists on https://groups.google.com/ a subscribe link is
       # automatically generated.
