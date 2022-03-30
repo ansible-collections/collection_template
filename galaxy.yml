@@ -18,6 +18,6 @@ repository: https://github.com/ansible-collections/community.REPO_NAME
 homepage: https://github.com/ansible-collections/community.REPO_NAME
 issues: https://github.com/ansible-collections/community.REPO_NAME/issues
 build_ignore:
-# https://docs.ansible.com/ansible/devel/dev_guide/developing_collections.html#ignoring-files-and-folders
+# https://docs.ansible.com/ansible/devel/dev_guide/developing_collections_distributing.html#ignoring-files-and-folders
   - .gitignore
   - changelogs/.plugin-cache.yaml
