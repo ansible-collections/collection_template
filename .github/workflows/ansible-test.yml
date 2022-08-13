@@ -39,7 +39,10 @@ jobs:
           # Testing against `devel` may fail as new tests are added.
           # An alternative to `devel` is the `milestone` branch with
           # gets synchronized with `devel` every few weeks and therefore
-          # tends to be a more stable target.
+          # tends to be a more stable target. Be aware that it is not updated
+          # around creation of a new stable branch, this might cause a problem
+          # that two different versions of ansible-test use the same sanity test
+          # ignore.txt file.
         # - stable-2.9 # Only if your collection supports Ansible 2.9
           - stable-2.10
           - stable-2.11
