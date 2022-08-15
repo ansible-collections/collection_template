@@ -37,12 +37,19 @@ jobs:
         ansible:
           # It's important that Sanity is tested against all stable-X.Y branches
           # Testing against `devel` may fail as new tests are added.
+          # An alternative to `devel` is the `milestone` branch with
+          # gets synchronized with `devel` every few weeks and therefore
+          # tends to be a more stable target. Be aware that it is not updated
+          # around creation of a new stable branch, this might cause a problem
+          # that two different versions of ansible-test use the same sanity test
+          # ignore.txt file.
         # - stable-2.9 # Only if your collection supports Ansible 2.9
           - stable-2.10
           - stable-2.11
           - stable-2.12
           - stable-2.13
           - devel
+        # - milestone
     runs-on: ubuntu-latest
     steps:
       # Run sanity tests inside a Docker container.
@@ -78,6 +85,7 @@ jobs:
           - stable-2.12
           - stable-2.13
           - devel
+        # - milestone
 
     steps:
       - name: >-
@@ -116,6 +124,7 @@ jobs:
           - stable-2.12
           - stable-2.13
           - devel
+        # - milestone
         python:
           - '2.6'
           - '2.7'
