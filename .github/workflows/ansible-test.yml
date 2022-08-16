@@ -44,7 +44,7 @@ jobs:
           # that two different versions of ansible-test use the same sanity test
           # ignore.txt file.
         # - stable-2.9 # Only if your collection supports Ansible 2.9
-          - stable-2.10
+        # - stable-2.10 # Only if your collection supports ansible-base 2.10
           - stable-2.11
           - stable-2.12
           - stable-2.13
@@ -80,7 +80,7 @@ jobs:
       matrix:
         ansible:
           # - stable-2.9 # Only if your collection supports Ansible 2.9
-          - stable-2.10
+          # - stable-2.10 # Only if your collection supports ansible-base 2.10
           - stable-2.11
           - stable-2.12
           - stable-2.13
@@ -119,7 +119,7 @@ jobs:
       matrix:
         ansible:
           # - stable-2.9 # Only if your collection supports Ansible 2.9
-          - stable-2.10
+          # - stable-2.10 # Only if your collection supports ansible-base 2.10
           - stable-2.11
           - stable-2.12
           - stable-2.13
