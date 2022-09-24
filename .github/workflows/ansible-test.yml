@@ -5,7 +5,9 @@
 # 3. For the comprehensive list of the inputs supported by the
 #    ansible-community/ansible-test-gh-action GitHub Action, see
 #    https://github.com/marketplace/actions/ansible-test.
-# 4. If you need help please ask in #ansible-community on the Libera.chat IRC
+# 4. Make sure to add the "check" job to your repository branch
+#    protection once this workflow is added.
+# 5. If you need help please ask in #ansible-community on the Libera.chat IRC
 #    network.
 
 name: CI
@@ -165,3 +167,20 @@ jobs:
           # OPTIONAL If your integration tests require code
           # from other collections, install them like this
           test-deps: ansible.netcommon
+
+
+  check:  # This job does nothing and is only used for the branch protection
+    if: always()
+
+    needs:
+      - sanity
+      - units
+      - integration
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Decide whether the needed jobs succeeded or failed
+      uses: re-actors/alls-green@release/v1
+      with:
+        jobs: ${{ toJSON(needs) }}
