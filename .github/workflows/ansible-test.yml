@@ -5,7 +5,8 @@
 # 3. For the comprehensive list of the inputs supported by the
 #    ansible-community/ansible-test-gh-action GitHub Action, see
 #    https://github.com/marketplace/actions/ansible-test.
-# 4. Make sure to add the "check" job to your repository branch
+# 4. If you want to prevent merging PRs that do not pass all tests,
+#    make sure to add the "check" job to your repository branch
 #    protection once this workflow is added.
 # 5. If you need help please ask in #ansible-community on the Libera.chat IRC
 #    network.
