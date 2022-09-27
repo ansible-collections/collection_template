@@ -8,6 +8,8 @@
 # 4. If you want to prevent merging PRs that do not pass all tests,
 #    make sure to add the "check" job to your repository branch
 #    protection once this workflow is added.
+#    It is also possible to tweak which jobs are allowed to fail. See
+#    https://github.com/marketplace/actions/alls-green#gotchas for more detail.
 # 5. If you need help please ask in #ansible-community on the Libera.chat IRC
 #    network.
 
