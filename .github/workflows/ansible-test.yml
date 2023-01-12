@@ -55,9 +55,11 @@ jobs:
           # around creation of a new stable branch, this might cause a problem
           # that two different versions of ansible-test use the same sanity test
           # ignore.txt file.
-        # - stable-2.9 # Only if your collection supports Ansible 2.9
-        # - stable-2.10 # Only if your collection supports ansible-base 2.10
-          - stable-2.11
+          # The commented branches below are EOL,
+          # do you really need your collection to support them if it still does?
+          # - stable-2.9 # Only if your collection supports Ansible 2.9
+          # - stable-2.10 # Only if your collection supports ansible-base 2.10
+          # - stable-2.11 # Only if your collection supports ansible-core 2.11
           - stable-2.12
           - stable-2.13
           - stable-2.14
@@ -77,6 +79,8 @@ jobs:
       # The docker container has all the pinned dependencies that are
       # required and all Python versions Ansible supports.
       - name: Perform sanity testing
+        # See the documentation for the following GitHub action on
+        # https://github.com/ansible-community/ansible-test-gh-action/blob/main/README.md
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
           ansible-core-version: ${{ matrix.ansible }}
@@ -86,6 +90,10 @@ jobs:
           # test-deps: >-
           #   ansible.netcommon
           #   ansible.utils
+          # OPTIONAL If set to true, will test only against changed files,
+          # which should improve CI performance. See limitations on
+          # https://github.com/ansible-community/ansible-test-gh-action#pull-request-change-detection
+          pull-request-change-detection: true
 
 ###
 # Unit tests (OPTIONAL)
@@ -108,9 +116,11 @@ jobs:
       fail-fast: true
       matrix:
         ansible:
+          # The commented branches below are EOL,
+          # do you really need your collection to support them if it still does?
           # - stable-2.9 # Only if your collection supports Ansible 2.9
           # - stable-2.10 # Only if your collection supports ansible-base 2.10
-          - stable-2.11
+          # - stable-2.11 # Only if your collection supports ansible-core 2.11
           - stable-2.12
           - stable-2.13
           - stable-2.14
@@ -121,6 +131,8 @@ jobs:
       - name: >-
           Perform unit testing against
           Ansible version ${{ matrix.ansible }}
+        # See the documentation for the following GitHub action on
+        # https://github.com/ansible-community/ansible-test-gh-action/blob/main/README.md
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
           ansible-core-version: ${{ matrix.ansible }}
@@ -130,6 +142,10 @@ jobs:
           test-deps: >-
             ansible.netcommon
             ansible.utils
+          # OPTIONAL If set to true, will test only against changed files,
+          # which should improve CI performance. See limitations on
+          # https://github.com/ansible-community/ansible-test-gh-action#pull-request-change-detection
+          pull-request-change-detection: true
 
 ###
 # Integration tests (RECOMMENDED)
@@ -156,9 +172,11 @@ jobs:
       fail-fast: false
       matrix:
         ansible:
+          # The commented branches below are EOL,
+          # do you really need your collection to support them if it still does?
           # - stable-2.9 # Only if your collection supports Ansible 2.9
           # - stable-2.10 # Only if your collection supports ansible-base 2.10
-          - stable-2.11
+          # - stable-2.11 # Only if your collection supports ansible-core 2.11
           - stable-2.12
           - stable-2.13
           - stable-2.14
@@ -191,6 +209,8 @@ jobs:
           Perform integration testing against
           Ansible version ${{ matrix.ansible }}
           under Python ${{ matrix.python }}
+        # See the documentation for the following GitHub action on
+        # https://github.com/ansible-community/ansible-test-gh-action/blob/main/README.md
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
           ansible-core-version: ${{ matrix.ansible }}
@@ -201,6 +221,10 @@ jobs:
           # OPTIONAL If your integration tests require code
           # from other collections, install them like this
           test-deps: ansible.netcommon
+          # OPTIONAL If set to true, will test only against changed files,
+          # which should improve CI performance. See limitations on
+          # https://github.com/ansible-community/ansible-test-gh-action#pull-request-change-detection
+          pull-request-change-detection: true
 
 
   check:  # This job does nothing and is only used for the branch protection
