@@ -202,6 +202,13 @@ jobs:
             python: '3.10'
           - ansible: stable-2.11
             python: '3.10'
+          # Python 2.6 is not supported with ansible-core >= 2.13
+          - ansible: stable-2.13
+            python: '2.6'
+          - ansible: stable-2.14
+            python: '2.6'
+          - ansible: devel
+            python: '2.6'
             
 
     steps:
