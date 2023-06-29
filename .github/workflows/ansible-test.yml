@@ -196,7 +196,7 @@ jobs:
           # Timely add new versions announced in
           # https://github.com/ansible-collections/news-for-maintainers,
           # consider dropping testing against EOL versions.
-          # ansible-core 2.14
+          # ansible-core 2.13
           - ansible: stable-2.13
             python: '2.7'
           - ansible: stable-2.13
