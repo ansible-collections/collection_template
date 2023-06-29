@@ -1,17 +1,31 @@
 # README FIRST
-# 1. If you don't have unit tests, remove that section.
-# 2. If your collection depends on other collections ensure they are installed,
+# 1. Subscribe to https://github.com/ansible-collections/news-for-maintainers
+#    (click the Watch button on the homepage > Custom > Issues)
+#    and keep this matrix up to date in accordance to related announcements.
+#    Timely add new ansible-core versions and consider dropping support
+#    and testing against its EOL versions.
+# 2. If your collection repository is under the ansible-collections org,
+#    please keep in mind that the number of GHA jobs is limited
+#    and shared across all the collections in the org.
+#    So please test only against necessary entities (see p.1).
+# 3. If you don't have unit or integration tests, remove corresponding sections.
+# 4. If your collection depends on other collections ensure they are installed,
 #    add them to the "test-deps" input.
-# 3. For the comprehensive list of the inputs supported by the
+# 5. For the comprehensive list of the inputs supported by the
 #    ansible-community/ansible-test-gh-action GitHub Action, see
 #    https://github.com/marketplace/actions/ansible-test.
-# 4. If you want to prevent merging PRs that do not pass all tests,
+# 6. If you want to prevent merging PRs that do not pass all tests,
 #    make sure to add the "check" job to your repository branch
 #    protection once this workflow is added.
 #    It is also possible to tweak which jobs are allowed to fail. See
 #    https://github.com/marketplace/actions/alls-green#gotchas for more detail.
-# 5. If you need help please ask in #ansible-community on the Libera.chat IRC
-#    network.
+# 7. If you need help please ask in #community:ansible.com on Matrix
+#    or in bridged #ansible-community on the Libera.Chat IRC channel.
+#    See https://docs.ansible.com/ansible/devel/community/communication.html
+#    for details.
+# 8. If your collection is [going to get] included in the Ansible package,
+#    it has to adhere to Python compatibility and CI testing requirements described in
+#    https://docs.ansible.com/ansible/latest/community/collection_contributors/collection_requirements.html.
 
 name: CI
 on:
@@ -55,12 +69,9 @@ jobs:
           # around creation of a new stable branch, this might cause a problem
           # that two different versions of ansible-test use the same sanity test
           # ignore.txt file.
-          # The commented branches below are EOL,
-          # do you really need your collection to support them if it still does?
-          # - stable-2.9 # Only if your collection supports Ansible 2.9
-          # - stable-2.10 # Only if your collection supports ansible-base 2.10
-          # - stable-2.11 # Only if your collection supports ansible-core 2.11
-          # - stable-2.12 # Only if your collection supports ansible-core 2.12
+          # Timely add new versions announced in
+          # https://github.com/ansible-collections/news-for-maintainers,
+          # consider dropping testing against EOL versions.
           - stable-2.13
           - stable-2.14
           - stable-2.15
@@ -117,12 +128,9 @@ jobs:
       fail-fast: true
       matrix:
         ansible:
-          # The commented branches below are EOL,
-          # do you really need your collection to support them if it still does?
-          # - stable-2.9 # Only if your collection supports Ansible 2.9
-          # - stable-2.10 # Only if your collection supports ansible-base 2.10
-          # - stable-2.11 # Only if your collection supports ansible-core 2.11
-          # - stable-2.12 # Only if your collection supports ansible-core 2.12
+          # Timely add new versions announced in
+          # https://github.com/ansible-collections/news-for-maintainers,
+          # consider dropping testing against EOL versions.
           - stable-2.13
           - stable-2.14
           - stable-2.15
@@ -185,72 +193,10 @@ jobs:
           - '3.10'
           - '3.11'
         include:
-          # Add more CI runs for specific ansible-core + Python combinations
-
-          # The commented branches below are EOL,
-          # do you really need your collection to support them if it still does?
-
-          # Ansible 2.9 - only if your collection supports Ansible 2.9!
-          # - ansible: stable-2.9
-          #   python: '2.6'
-          # - ansible: stable-2.9
-          #   python: '2.7'
-          # - ansible: stable-2.9
-          #   python: '3.5'
-          # - ansible: stable-2.9
-          #   python: '3.6'
-          # - ansible: stable-2.9
-          #   python: '3.7'
-          # - ansible: stable-2.9
-          #   python: '3.8'
-          # ansible-base 2.10 - only if your collection supports ansible 2.10!
-          # - ansible: stable-2.10
-          #   python: '2.6'
-          # - ansible: stable-2.10
-          #   python: '2.7'
-          # - ansible: stable-2.10
-          #   python: '3.5'
-          # - ansible: stable-2.10
-          #   python: '3.6'
-          # - ansible: stable-2.10
-          #   python: '3.7'
-          # - ansible: stable-2.10
-          #   python: '3.8'
-          # - ansible: stable-2.10
-          #   python: '3.9'
-          # ansible-core 2.11 - only if your collection supports ansible 2.11!
-          # - ansible: stable-2.11
-          #   python: '2.6'
-          # - ansible: stable-2.11
-          #   python: '2.7'
-          # - ansible: stable-2.11
-          #   python: '3.5'
-          # - ansible: stable-2.11
-          #   python: '3.6'
-          # - ansible: stable-2.11
-          #   python: '3.7'
-          # - ansible: stable-2.11
-          #   python: '3.8'
-          # - ansible: stable-2.11
-          #   python: '3.9'
-          # ansible-core 2.12 - only if your collection supports ansible 2.12!
-          # - ansible: stable-2.12
-          #   python: '2.6'
-          # - ansible: stable-2.12
-          #   python: '2.7'
-          # - ansible: stable-2.12
-          #   python: '3.5'
-          # - ansible: stable-2.12
-          #   python: '3.6'
-          # - ansible: stable-2.12
-          #   python: '3.7'
-          # - ansible: stable-2.12
-          #   python: '3.8'
-          # - ansible: stable-2.12
-          #   python: '3.9'
-          # - ansible: stable-2.12
-          #   python: '3.10'
-          # ansible-core 2.13
+          # Timely add new versions announced in
+          # https://github.com/ansible-collections/news-for-maintainers,
+          # consider dropping testing against EOL versions.
+          # ansible-core 2.14
           - ansible: stable-2.13
             python: '2.7'
           - ansible: stable-2.13
