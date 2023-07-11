@@ -9,7 +9,7 @@
 #    and shared across all the collections in the org.
 #    So, focusing on good test coverage of your collection,
 #    please avoid testing against unnecessary entities such as
-#    ansible-core EOL versions your collection does not support.
+#    ansible-core EOL versions or versions your collection does not support.
 # 3. If you don't have unit or integration tests, remove corresponding sections.
 # 4. If your collection depends on other collections ensure they are installed,
 #    add them to the "test-deps" input.
