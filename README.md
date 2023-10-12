@@ -120,7 +120,7 @@ You can also install a specific version of the collection, for example, if you n
 ansible-galaxy collection install NAMESPACE.COLLECTION_NAME:==0.1.0
 ```
 
-See [Ansible using collections](https://docs.ansible.com/ansible/devel/user_guide/collections_using.html) for more details.
+See [using Ansible collections](https://docs.ansible.com/ansible/devel/user_guide/collections_using.html) for more details.
 
 ## Release notes
 
