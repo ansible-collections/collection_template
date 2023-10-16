@@ -137,7 +137,7 @@ See the [changelog](https://github.com/ansible-collections/REPONAMEHERE/tree/mai
 - [Ansible user guide](https://docs.ansible.com/ansible/devel/user_guide/index.html)
 - [Ansible developer guide](https://docs.ansible.com/ansible/devel/dev_guide/index.html)
 - [Ansible collections requirements](https://docs.ansible.com/ansible/devel/community/collection_contributors/collection_requirements.html)
-- [Ansible community code of conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html)
+- [Ansible community Code of Conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html)
 - [The Bullhorn (the Ansible contributor newsletter)](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn)
 - [Important announcements for maintainers](https://github.com/ansible-collections/news-for-maintainers)
 
