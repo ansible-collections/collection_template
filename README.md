@@ -30,7 +30,7 @@ Join us on:
     * [Social Spaces](https://forum.ansible.com/c/chat/4)
 * Matrix chat rooms:
     * [#users:ansible.com](https://matrix.to/#/#users:ansible.com): general use questions and support
-    * [#ansible-community:ansible.com](https://matrix.to/#/#community:ansible.com): community and collection development questions
+    * [#community:ansible.com](https://matrix.to/#/#community:ansible.com): community and collection development questions
     * [#social:ansible.com](https://matrix.to/#/#social:ansible.com): to say "Good morning, community!"
 
 We take part in the global [Ansible contributor summit](https://github.com/ansible/community/wiki/Contributor-Summit) virtually or in-person. Track [The Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn) and join us.
