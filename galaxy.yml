@@ -1,23 +1,65 @@
-# See https://docs.ansible.com/ansible/latest/dev_guide/collections_galaxy_meta.html
+### REQUIRED
 
-namespace: community
-name: FIXME
-version: 0.1.0
+# The namespace of the collection. This can be a company/brand/organization or product namespace under which all
+# content lives. May only contain alphanumeric lowercase characters and underscores. Namespaces cannot start with
+# underscores or numbers and cannot contain consecutive underscores
+namespace: ieisystem
+
+# The name of the collection. Has the same character restrictions as 'namespace'
+name: inmanage
+
+# The version of the collection. Must be compatible with semantic versioning
+version: 0.0.1
+
+# The path to the Markdown (.md) readme file. This path is relative to the root of the collection
 readme: README.md
+
+# A list of the collection's content authors. Can be just the name or in the format 'Full Name <email> (url)
+# @nicks:irc/im.site#channel'
 authors:
-  - YOUR NAME (github.com/YOURGITHUB)
-description: null
-license_file: LICENSE
-tags:
-# tags so people can search for collections https://galaxy.ansible.com/search
-# tags are all lower-case, no spaces, no dashes.
-  - example1
-  - example2
-repository: https://github.com/ansible-collections/community.REPO_NAME
-#documentation: https://github.com/ansible-collection-migration/community.REPO_NAME/tree/main/docs
-homepage: https://github.com/ansible-collections/community.REPO_NAME
-issues: https://github.com/ansible-collections/community.REPO_NAME/issues
+- Baoshan Wang <wangbaoshan@ieisystem.com>
+
+
+### OPTIONAL but strongly recommended
+
+# A short summary description of the collection
+description: ieisystem Server supports ansible management device.
+
+# Either a single license or a list of licenses for content inside of a collection. Ansible Galaxy currently only
+# accepts L(SPDX,https://spdx.org/licenses/) licenses. This key is mutually exclusive with 'license_file'
+license:
+- GPL-2.0-or-later
+
+# The path to the license file for the collection. This path is relative to the root of the collection. This key is
+# mutually exclusive with 'license'
+license_file: ''
+
+# A list of tags you want to associate with the collection for indexing/searching. A tag name has the same character
+# requirements as 'namespace' and 'name'
+tags: [ieisystem, InManage, server, manager, tools]
+
+# Collections that this collection requires to be installed for it to be usable. The key of the dict is the
+# collection label 'namespace.name'. The value is a version range
+# L(specifiers,https://python-semanticversion.readthedocs.io/en/latest/#requirement-specification). Multiple version
+# range specifiers can be set and are separated by ','
+dependencies: {}
+
+# The URL of the originating SCM repository
+repository: https://github.com/ieisystem/ieisystem.inmanage
+
+# The URL to any online docs
+documentation: https://ieisystem.github.io/ieisystem.inmanage-docs/index.html
+
+# The URL to the homepage of the collection/project
+homepage: https://github.com/ieisystem/ieisystem.inmanage
+
+# The URL to the collection issue tracker
+issues: https://github.com/ieisystem/ieisystem.inmanage/issues
+
+# Ignore files and directories matching the following patterns
 build_ignore:
-# https://docs.ansible.com/ansible/devel/dev_guide/developing_collections_distributing.html#ignoring-files-and-folders
+  - Dockerfile
+  - Jenkinsfile
+  - yamllint.yaml
+  - ansible.cfg
   - .gitignore
-  - changelogs/.plugin-cache.yaml
