@@ -75,9 +75,9 @@ jobs:
           # Add new versions announced in
           # https://github.com/ansible-collections/news-for-maintainers in a timely manner,
           # consider dropping testing against EOL versions and versions you don't support.
-          - stable-2.13
           - stable-2.14
           - stable-2.15
+          - stable-2.16
           - devel
         # - milestone
     # Ansible-test on various stable branches does not yet work well with cgroups v2.
@@ -108,7 +108,7 @@ jobs:
           # OPTIONAL If set to true, will test only against changed files,
           # which should improve CI performance. See limitations on
           # https://github.com/ansible-community/ansible-test-gh-action#pull-request-change-detection
-          pull-request-change-detection: true
+          pull-request-change-detection: false
 
 ###
 # Unit tests (OPTIONAL)
@@ -134,9 +134,9 @@ jobs:
           # Add new versions announced in
           # https://github.com/ansible-collections/news-for-maintainers in a timely manner,
           # consider dropping testing against EOL versions and versions you don't support.
-          - stable-2.13
           - stable-2.14
           - stable-2.15
+          - stable-2.16
           - devel
         # - milestone
 
@@ -158,7 +158,7 @@ jobs:
           # OPTIONAL If set to true, will test only against changed files,
           # which should improve CI performance. See limitations on
           # https://github.com/ansible-community/ansible-test-gh-action#pull-request-change-detection
-          pull-request-change-detection: true
+          pull-request-change-detection: false
 
 ###
 # Integration tests (RECOMMENDED)
@@ -188,32 +188,16 @@ jobs:
           - devel
         # - milestone
         python:
-          - '2.7'
-          - '3.6'
           - '3.7'
           - '3.8'
           - '3.9'
           - '3.10'
           - '3.11'
+          - '3.12'
         include:
           # Add new versions announced in
           # https://github.com/ansible-collections/news-for-maintainers in a timely manner,
           # consider dropping testing against EOL versions and versions you don't support.
-          # ansible-core 2.13
-          - ansible: stable-2.13
-            python: '2.7'
-          - ansible: stable-2.13
-            python: '3.5'
-          - ansible: stable-2.13
-            python: '3.6'
-          - ansible: stable-2.13
-            python: '3.7'
-          - ansible: stable-2.13
-            python: '3.8'
-          - ansible: stable-2.13
-            python: '3.9'
-          - ansible: stable-2.13
-            python: '3.10'
           # ansible-core 2.14
           - ansible: stable-2.14
             python: '2.7'
@@ -248,7 +232,23 @@ jobs:
             python: '3.10'
           - ansible: stable-2.15
             python: '3.11'
-            
+          # ansible-core 2.16
+          - ansible: stable-2.16
+            python: '2.7'
+          - ansible: stable-2.16
+            python: '3.6'
+          - ansible: stable-2.16
+            python: '3.7'
+          - ansible: stable-2.16
+            python: '3.8'
+          - ansible: stable-2.16
+            python: '3.9'
+          - ansible: stable-2.16
+            python: '3.10'
+          - ansible: stable-2.16
+            python: '3.11'
+          - ansible: stable-2.16
+            python: '3.12'
 
     steps:
       - name: >-
@@ -270,7 +270,7 @@ jobs:
           # OPTIONAL If set to true, will test only against changed files,
           # which should improve CI performance. See limitations on
           # https://github.com/ansible-community/ansible-test-gh-action#pull-request-change-detection
-          pull-request-change-detection: true
+          pull-request-change-detection: false
 
 
   check:  # This job does nothing and is only used for the branch protection
