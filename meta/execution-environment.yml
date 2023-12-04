@@ -1,4 +1,8 @@
 ---
+# Copyright (c) Ansible Project
+# GNU General Public License v3.0+ (see LICENSES/GPL-3.0-or-later.txt or https://www.gnu.org/licenses/gpl-3.0.txt)
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 # List your controller-side system package and/or Python package requirements
 # if exist in the files specified below to support easy execution environments building for your collection users
 # https://ansible.readthedocs.io/en/latest/getting_started_ee/index.html
