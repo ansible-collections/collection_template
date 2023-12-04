@@ -1,0 +1,14 @@
+---
+# Uncomment the lines below and list your controller-side system package and/or Python package requirements
+# if exist to support easy execution environments building for your collection users
+# https://ansible.readthedocs.io/en/latest/getting_started_ee/index.html
+# If there are no such dependencies, please just remove the file.
+# See https://ansible.readthedocs.io/projects/builder/en/latest/collection_metadata/#how-to-verify-collection-level-metadata
+# to learn how to test your configuration.
+
+#version: 3
+#dependencies:
+#  python:
+#    - <put Python package requirements here if exist>
+#  system:
+#    - <put system package requirements here if exist>
