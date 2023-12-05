@@ -10,7 +10,6 @@
 # to learn how to test your configuration.
 # Do not delete these files even if the collection has no dependencies!
 
-version: 3
 dependencies:
   python: meta/ee-requirements.txt
   system: meta/ee-bindep.txt
