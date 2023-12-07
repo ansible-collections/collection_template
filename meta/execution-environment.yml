@@ -8,7 +8,13 @@
 # https://ansible.readthedocs.io/en/latest/getting_started_ee/index.html
 # See https://ansible.readthedocs.io/projects/builder/en/latest/collection_metadata/#how-to-verify-collection-level-metadata
 # to learn how to test your configuration.
+
 # Do not delete these files even if the collection has no dependencies!
+# If you delete them, ansible-builder will use bindep.txt and requirements.txt
+# from the collection root by default. Especially requirements.txt there is often
+# used to test/build/development requirements for the collection, that are
+# not needed for end-users to use the collection. This would increase the EE
+# size and increase the chance of dependency collisions.
 
 dependencies:
   python: meta/ee-requirements.txt
