@@ -186,6 +186,9 @@ jobs:
       matrix:
         ansible:
           - devel
+          - stable-2.14
+          - stable-2.15
+          - stable-2.16
         # - milestone
         python:
           - '3.7'
@@ -205,16 +208,6 @@ jobs:
             python: '3.5'
           - ansible: stable-2.14
             python: '3.6'
-          - ansible: stable-2.14
-            python: '3.7'
-          - ansible: stable-2.14
-            python: '3.8'
-          - ansible: stable-2.14
-            python: '3.9'
-          - ansible: stable-2.14
-            python: '3.10'
-          - ansible: stable-2.14
-            python: '3.11'
           # ansible-core 2.15
           - ansible: stable-2.15
             python: '2.7'
@@ -222,32 +215,15 @@ jobs:
             python: '3.5'
           - ansible: stable-2.15
             python: '3.6'
-          - ansible: stable-2.15
-            python: '3.7'
-          - ansible: stable-2.15
-            python: '3.8'
-          - ansible: stable-2.15
-            python: '3.9'
-          - ansible: stable-2.15
-            python: '3.10'
-          - ansible: stable-2.15
-            python: '3.11'
           # ansible-core 2.16
           - ansible: stable-2.16
             python: '2.7'
           - ansible: stable-2.16
             python: '3.6'
-          - ansible: stable-2.16
-            python: '3.7'
-          - ansible: stable-2.16
-            python: '3.8'
-          - ansible: stable-2.16
-            python: '3.9'
-          - ansible: stable-2.16
-            python: '3.10'
-          - ansible: stable-2.16
-            python: '3.11'
-          - ansible: stable-2.16
+        exclude:
+          - ansible: stable-2.14
+            python: '3.12'
+          - ansible: stable-2.15
             python: '3.12'
 
     steps:
