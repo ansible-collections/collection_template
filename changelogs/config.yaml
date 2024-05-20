@@ -1,3 +1,4 @@
+---
 add_plugin_period: true
 changelog_filename_template: ../CHANGELOG.rst
 changelog_filename_version_depth: 0
