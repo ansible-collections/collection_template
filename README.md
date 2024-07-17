@@ -37,7 +37,7 @@ If your collection is not present on the Ansible forum yet, please check out the
     * [Social Spaces](https://forum.ansible.com/c/chat/4): gather and interact with fellow enthusiasts.
     * [News & Announcements](https://forum.ansible.com/c/news/5): track project-wide announcements including social events.
 
-* The Ansible [Bullhorn newsletter](https://forum.ansible.com/c/news/bullhorn/17): used to announce releases and important changes.
+* The Ansible [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn): used to announce releases and important changes.
 
 For more information about communication, see the [Ansible communication guide](https://docs.ansible.com/ansible/devel/community/communication.html).
 
