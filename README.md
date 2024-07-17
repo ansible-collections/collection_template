@@ -26,7 +26,9 @@ If you encounter abusive behavior, please refer to the [policy violations](https
 
 ## Communication
 
-> If your collection is not present on the Ansible forum yet, please check out the existing [tags](https://forum.ansible.com/tags) and [groups](https://forum.ansible.com/g) - use what suits your collection. If there is no appropritate tag and group yet, please [request one](https://forum.ansible.com/t/requesting-a-forum-group/503/17).
+<!--
+If your collection is not present on the Ansible forum yet, please check out the existing [tags](https://forum.ansible.com/tags) and [groups](https://forum.ansible.com/g) - use what suits your collection. If there is no appropritate tag and group yet, please [request one](https://forum.ansible.com/t/requesting-a-forum-group/503/17).
+-->
 
 * Join the Ansible forum:
     * [Get Help](https://forum.ansible.com/c/help/6/none): get help or help others.
