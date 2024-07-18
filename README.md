@@ -9,7 +9,14 @@ You can build a new repository for an Ansible Collection using this template by 
 
 ## Our mission
 
-<!-- Put your collection project's mission statement in here. -->
+<!-- Put your collection's mission statement in here. Example follows. -->
+
+At the `your collection name`, our mission is to produce and maintain simple, flexible,
+and powerful open-source software tailored to `your collection purpose`.
+
+We welcome members from all skill levels to participate actively in our open, inclusive, and vibrant community.
+Whether you are an expert or just beginning your journey with Ansible and `your collection name`,
+you are encouraged to contribute, share insights, and collaborate with fellow enthusiasts!
 
 ## Code of Conduct
 
@@ -19,23 +26,20 @@ If you encounter abusive behavior, please refer to the [policy violations](https
 
 ## Communication
 
-<!--List available communication channels. In addition to channels specific to your collection, we also recommend to use the following ones.-->
+<!--
+If your collection is not present on the Ansible forum yet, please check out the existing [tags](https://forum.ansible.com/tags) and [groups](https://forum.ansible.com/g) - use what suits your collection. If there is no appropritate tag and group yet, please [request one](https://forum.ansible.com/t/requesting-a-forum-group/503/17).
+-->
 
-We announce important development changes and releases through Ansible's [The Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn). If you are a collection developer, be sure you are subscribed.
+* Join the Ansible forum:
+    * [Get Help](https://forum.ansible.com/c/help/6): get help or help others.
+    * [Posts tagged with 'your tag'](https://forum.ansible.com/tag/YOUR_TAG): subscribe to participate in collection-related conversations.
+    * [Refer to your forum group here if exists](https://forum.ansible.com/g/): by joining the team you will automatically get subscribed to the posts tagged with [your group forum tag here](https://forum.ansible.com/tags).
+    * [Social Spaces](https://forum.ansible.com/c/chat/4): gather and interact with fellow enthusiasts.
+    * [News & Announcements](https://forum.ansible.com/c/news/5): track project-wide announcements including social events.
 
-Join us on:
-* The Ansible forum:
-    * [News & Announcements](https://forum.ansible.com/c/news/5/none)
-    * [Get Help](https://forum.ansible.com/c/help/6/none)
-    * [Social Spaces](https://forum.ansible.com/c/chat/4)
-* Matrix chat rooms:
-    * [#users:ansible.com](https://matrix.to/#/#users:ansible.com): general use questions and support
-    * [#community:ansible.com](https://matrix.to/#/#community:ansible.com): community and collection development questions
-    * [#social:ansible.com](https://matrix.to/#/#social:ansible.com): to say "Good morning, community!"
+* The Ansible [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn): used to announce releases and important changes.
 
-We take part in the global [Ansible contributor summit](https://github.com/ansible/community/wiki/Contributor-Summit) virtually or in-person. Track [The Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn) and join us.
-
-For more information about communication, refer to the [Ansible communication guide](https://docs.ansible.com/ansible/devel/community/communication.html).
+For more information about communication, see the [Ansible communication guide](https://docs.ansible.com/ansible/devel/community/communication.html).
 
 ## Contributing to this collection
 
