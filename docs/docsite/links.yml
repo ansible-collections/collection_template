@@ -43,3 +43,7 @@ communication:
       # You can also add a `subscribe` field with an URI that allows to subscribe
       # to the mailing list. For lists on https://groups.google.com/ a subscribe link is
       # automatically generated.
+  forums:
+    - topic: Ansible Forum
+      # The following URL directly points to the "Get Help" section
+      url: https://forum.ansible.com/c/help/6
