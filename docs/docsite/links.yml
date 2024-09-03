@@ -33,13 +33,6 @@ communication:
   matrix_rooms:
     - topic: General usage and support questions
       room: '#users:ansible.im'
-  irc_channels:
-    - topic: General usage and support questions
-      network: Libera
-      channel: '#ansible'
-  mailing_lists:
-    - topic: Ansible Project List
-      url: https://groups.google.com/g/ansible-project
       # You can also add a `subscribe` field with an URI that allows to subscribe
       # to the mailing list. For lists on https://groups.google.com/ a subscribe link is
       # automatically generated.
