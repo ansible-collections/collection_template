@@ -5,7 +5,7 @@
 
 # List your controller-side system package and/or Python package requirements
 # if exist in the files specified below to support easy execution environments building for your collection users
-# https://ansible.readthedocs.io/en/latest/getting_started_ee/index.html
+# https://docs.ansible.com/ansible/devel/getting_started_ee/index.html
 # See https://ansible.readthedocs.io/projects/builder/en/latest/collection_metadata/#how-to-verify-collection-level-metadata
 # to learn how to test your configuration.
 
