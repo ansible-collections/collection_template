@@ -1,0 +1,25 @@
+# Integration tests for the dummy module
+- name: Devide by zero
+  register: result
+  ignore_errors: true
+  community.collection_template.dummy:
+    dividend: 4
+    divisor: 0
+
+- name: Assert the result
+  ansible.builtin.assert:
+    that:
+    - result is failed
+    - result.msg == "Division by zero is not allowed!"
+
+- name: Devide dividend by divisor
+  register: result
+  community.collection_template.dummy:
+    dividend: 4
+    divisor: 2
+
+- name: Assert the result
+  ansible.builtin.assert:
+    that:
+    - result is succeeded
+    - result.quotient == 2
