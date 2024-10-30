@@ -91,7 +91,7 @@ Every voice is important. If you have something on your mind, create an issue or
 
 ## Included content
 
-<!-- Galaxy now displays full module docs within the UI. If you don't use Galaxy for your collection, you may need to either describe your plugins etc here, or point to an external docsite to cover that information. -->
+<!-- Galaxy now usually displays full module and plugin docs within the UI. If you don't use Galaxy for your collection, you may need to either describe your plugins etc here, or point to an external docsite to cover that information. -->
 
 ## Using this collection
 
