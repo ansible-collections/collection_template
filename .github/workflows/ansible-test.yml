@@ -138,6 +138,8 @@ jobs:
         with:
           ansible-core-version: ${{ matrix.ansible }}
           testing-type: units
+          # Uncomment to configure a codecov token
+          # codecov-token: ${{ secrets.CODECOV_TOKEN }}
           # OPTIONAL If your unit tests require code
           # from other collections, install them like this
           test-deps: >-
@@ -238,6 +240,8 @@ jobs:
           # pre-test-cmd:
           target-python-version: ${{ matrix.python }}
           testing-type: integration
+          # Uncomment to configure a codecov token
+          # codecov-token: ${{ secrets.CODECOV_TOKEN }}
           # OPTIONAL If your integration tests require code
           # from other collections, install them like this
           test-deps: ansible.netcommon
