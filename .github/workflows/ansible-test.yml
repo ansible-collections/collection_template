@@ -97,6 +97,7 @@ jobs:
           testing-type: sanity
           # Uncomment to configure a codecov token.
           # Check here whether a token is required: https://docs.codecov.com/docs/codecov-tokens
+          # Collections in the github.com/ansible-collections/ namespace usually do not need a token.
           # codecov-token: ${{ secrets.CODECOV_TOKEN }}
           # OPTIONAL If your sanity tests require code
           # from other collections, install them like this
@@ -143,6 +144,7 @@ jobs:
           testing-type: units
           # Uncomment to configure a codecov token.
           # Check here whether a token is required: https://docs.codecov.com/docs/codecov-tokens
+          # Collections in the github.com/ansible-collections/ namespace usually do not need a token.
           # codecov-token: ${{ secrets.CODECOV_TOKEN }}
           # OPTIONAL If your unit tests require code
           # from other collections, install them like this
@@ -246,6 +248,7 @@ jobs:
           testing-type: integration
           # Uncomment to configure a codecov token.
           # Check here whether a token is required: https://docs.codecov.com/docs/codecov-tokens
+          # Collections in the github.com/ansible-collections/ namespace usually do not need a token.
           # codecov-token: ${{ secrets.CODECOV_TOKEN }}
           # OPTIONAL If your integration tests require code
           # from other collections, install them like this
