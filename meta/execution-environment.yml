@@ -16,6 +16,7 @@
 # not needed for end-users to use the collection. Ansible-builder installing these
 # would increase the EE size and increase the chance of dependency collisions.
 
+version: 3
 dependencies:
   python: meta/ee-requirements.txt
   system: meta/ee-bindep.txt
