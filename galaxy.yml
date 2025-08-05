@@ -14,8 +14,8 @@ tags:
   # tags are all lower-case, no spaces, no dashes.
   - example1
   - example2
-  # You must have one of the tags below to satisfy Ansible Lint:
-  # ['application', 'cloud', 'database', 'eda', 'infrastructure', 'linux', 'monitoring', 'networking', 'security', 'storage', 'tools', 'windows']
+  # You must have one of the tags in the following link
+  # to satisfy Ansible Lint https://ansible.readthedocs.io/projects/lint/rules/galaxy/?h=galaxy+yml#galaxy
 repository: https://github.com/ansible-collections/community.REPO_NAME
 # documentation: https://github.com/ansible-collection-migration/community.REPO_NAME/tree/main/docs
 homepage: https://github.com/ansible-collections/community.REPO_NAME
