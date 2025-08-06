@@ -15,7 +15,7 @@ tags:
   - example1
   - example2
   # You must have one of the tags in the following link
-  # to satisfy Ansible Lint https://ansible.readthedocs.io/projects/lint/rules/galaxy/?h=galaxy+yml#galaxy
+  # to satisfy Ansible Lint https://ansible.readthedocs.io/projects/lint/rules/galaxy
 repository: https://github.com/ansible-collections/community.REPO_NAME
 # documentation: https://github.com/ansible-collection-migration/community.REPO_NAME/tree/main/docs
 homepage: https://github.com/ansible-collections/community.REPO_NAME
