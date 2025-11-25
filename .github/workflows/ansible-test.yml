@@ -25,11 +25,11 @@
 #    https://github.com/marketplace/actions/alls-green#gotchas for more detail.
 # 7. If you need help please ask in #community:ansible.com on Matrix
 #    or in bridged #ansible-community on the Libera.Chat IRC channel.
-#    See https://docs.ansible.com/ansible/devel/community/communication.html
+#    See https://docs.ansible.com/projects/ansible/devel/community/communication.html
 #    for details.
 # 8. If your collection is [going to get] included in the Ansible package,
 #    it has to adhere to Python compatibility and CI testing requirements described in
-#    https://docs.ansible.com/ansible/latest/community/collection_contributors/collection_requirements.html.
+#    https://docs.ansible.com/projects/ansible/latest/community/collection_contributors/collection_requirements.html.
 
 name: CI
 on:
@@ -58,7 +58,7 @@ jobs:
 ###
 # Sanity tests (REQUIRED)
 #
-# https://docs.ansible.com/ansible/latest/dev_guide/testing_sanity.html
+# https://docs.ansible.com/projects/ansible/latest/dev_guide/testing_sanity.html
 
   sanity:
     name: Sanity (Ⓐ${{ matrix.ansible }})
@@ -112,7 +112,7 @@ jobs:
 ###
 # Unit tests (OPTIONAL)
 #
-# https://docs.ansible.com/ansible/latest/dev_guide/testing_units.html
+# https://docs.ansible.com/projects/ansible/latest/dev_guide/testing_units.html
 
   units:
     runs-on: ubuntu-latest
@@ -159,7 +159,7 @@ jobs:
 ###
 # Integration tests (RECOMMENDED)
 #
-# https://docs.ansible.com/ansible/latest/dev_guide/testing_integration.html
+# https://docs.ansible.com/projects/ansible/latest/dev_guide/testing_integration.html
 
 
 # If the application you are testing is available as a docker container and you want to test
