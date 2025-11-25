@@ -5,7 +5,7 @@
 
 # List your controller-side Python package requirements here if exist
 # to support easy execution environments building for your collection users
-# https://docs.ansible.com/ansible/devel/getting_started_ee/index.html
-# See https://ansible.readthedocs.io/projects/builder/en/latest/collection_metadata/#how-to-verify-collection-level-metadata
+# https://docs.ansible.com/projects/ansible/devel/getting_started_ee/index.html
+# See https://docs.ansible.com/projects/builder/en/latest/collection_metadata/#how-to-verify-collection-level-metadata
 # to learn how to test your configuration.
 # Do not delete this file even if the collection has no dependencies!
