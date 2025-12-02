@@ -76,9 +76,9 @@ jobs:
           # Add new versions announced in
           # https://github.com/ansible-collections/news-for-maintainers in a timely manner,
           # consider dropping testing against EOL versions and versions you don't support.
-          - stable-2.16
-          - stable-2.17
           - stable-2.18
+          - stable-2.19
+          - stable-2.20
           - devel
         # - milestone
 
@@ -126,9 +126,9 @@ jobs:
           # Add new versions announced in
           # https://github.com/ansible-collections/news-for-maintainers in a timely manner,
           # consider dropping testing against EOL versions and versions you don't support.
-          - stable-2.16
-          - stable-2.17
           - stable-2.18
+          - stable-2.19
+          - stable-2.20
           - devel
         # - milestone
 
@@ -183,40 +183,11 @@ jobs:
           - '3.11'
           - '3.12'
           - '3.13'
+          - '3.14'
         include:
           # Add new versions announced in
           # https://github.com/ansible-collections/news-for-maintainers in a timely manner,
           # consider dropping testing against EOL versions and versions you don't support.
-          # ansible-core 2.16
-          - ansible: stable-2.16
-            python: '2.7'
-          - ansible: stable-2.16
-            python: '3.6'
-          - ansible: stable-2.16
-            python: '3.7'
-          - ansible: stable-2.16
-            python: '3.8'
-          - ansible: stable-2.16
-            python: '3.9'
-          - ansible: stable-2.16
-            python: '3.10'
-          - ansible: stable-2.16
-            python: '3.11'
-          - ansible: stable-2.16
-            python: '3.12'
-          # ansible-core 2.17
-          - ansible: stable-2.17
-            python: '3.7'
-          - ansible: stable-2.17
-            python: '3.8'
-          - ansible: stable-2.17
-            python: '3.9'
-          - ansible: stable-2.17
-            python: '3.10'
-          - ansible: stable-2.17
-            python: '3.11'
-          - ansible: stable-2.17
-            python: '3.12'
           # ansible-core 2.18
           - ansible: stable-2.18
             python: '3.8'
@@ -230,6 +201,32 @@ jobs:
             python: '3.12'
           - ansible: stable-2.18
             python: '3.13'
+          # ansible-core 2.19
+          - ansible: stable-2.19
+            python: '3.8'
+          - ansible: stable-2.19
+            python: '3.9'
+          - ansible: stable-2.19
+            python: '3.10'
+          - ansible: stable-2.19
+            python: '3.11'
+          - ansible: stable-2.19
+            python: '3.12'
+          - ansible: stable-2.19
+            python: '3.13'
+          # ansible-core 2.20
+          - ansible: stable-2.20
+            python: '3.9'
+          - ansible: stable-2.20
+            python: '3.10'
+          - ansible: stable-2.20
+            python: '3.11'
+          - ansible: stable-2.20
+            python: '3.12'
+          - ansible: stable-2.20
+            python: '3.13'
+          - ansible: stable-2.20
+            python: '3.14'
 
 
     steps:
