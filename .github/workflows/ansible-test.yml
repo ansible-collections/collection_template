@@ -80,6 +80,7 @@ jobs:
           - stable-2.19
           - stable-2.20
           - stable-2.21
+          - stable-2.22
           - devel
         # - milestone
 
@@ -241,6 +242,21 @@ jobs:
             python: '3.13'
           - ansible: stable-2.21
             python: '3.14'
+          # ansible-core 2.22
+          - ansible: stable-2.22
+            python: '3.9'
+          - ansible: stable-2.22
+            python: '3.10'
+          - ansible: stable-2.22
+            python: '3.11'
+          - ansible: stable-2.22
+            python: '3.12'
+          - ansible: stable-2.22
+            python: '3.13'
+          - ansible: stable-2.22
+            python: '3.14'
+          - ansible: stable-2.22
+            python: '3.15'
 
 
     steps:
